@@ -11,6 +11,13 @@
 
   function removeDuplication(str){
     // return to do ...
+    let obj = {};
+    for (let i = 0; i < str.length; i++) {
+      if(!obj[str[i]]) {
+        obj[str[i]] = 1;
+      }
+    }
+    return Object.keys(obj).join('')
   }
 
   describe("Tests", () => {
