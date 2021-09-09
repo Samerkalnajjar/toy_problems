@@ -14,6 +14,16 @@
 
  function isDeepEquals(obj1, obj2) {
 	// TO DO
+	if(obj1 === null ) return false
+	if(obj1 === undefined || obj2 === undefined) return false
+	let str1 = JSON.stringify(obj1)
+	let str2 = JSON.stringify(obj2)
+	for (let index = 0; index < str1.length; index++) {
+		if(str1[index] !== str2[index]) {
+			return false
+		}
+	}
+	return true
 }
 
 
