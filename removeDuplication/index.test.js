@@ -20,7 +20,7 @@
     return Object.keys(obj).join('')
   }
 
-  describe("Tests", () => {
+  xdescribe("Tests", () => {
     it("test removeDuplication", () => {
       expect(removeDuplication('hello')).toStrictEqual('helo')
       expect(removeDuplication("absadsasdasdad")).toStrictEqual("absd")

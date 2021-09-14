@@ -19,10 +19,33 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
  * What is the time complexity for your solution ?
  */
 
+// time complexity: O(n)
+
 /**
  * Write the unit tests that cover your solution
  */
 
-function collatzSeq (number) {
-// TO DO
+describe('should return the highest chain', () => {
+    it('test', () => {
+        const result = collatzSeq(999995);
+        expect(result).toEqual(259);
+    })
+})
+
+function collatzSeq (number = 999999) {
+    // TO DO
+    let arr = [];
+    while(number !== 1){
+        if(number % 2 == 0){
+            number = parseInt(number / 2);
+            arr.push(number);
+        }else{
+            number = (number * 3) + 1;
+            arr.push(number);
+        }
+    }
+    if(number === 1) {
+        arr.push(number)
+    }
+    return arr.length;
 }

@@ -50,7 +50,7 @@
 
   }
 
-  describe("Tests", () => {
+  xdescribe("Tests", () => {
     it("test toSnakeCase", () => {
       expect(toSnakeCase('')).toStrictEqual('')
       expect(toSnakeCase("theStealthWarrior")).toStrictEqual("the_stealth_warrior")
