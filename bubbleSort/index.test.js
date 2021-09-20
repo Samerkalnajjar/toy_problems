@@ -30,7 +30,18 @@ const a = [34, 203, 3, 746, 200, 984, 198, 764, 9];
 
 // Feel free to add helper functions if needed
 
-const bubbleSort = (array) => {};
+const bubbleSort = (array) => {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            if(array[j] < array[i]) {
+                let temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    return array;
+};
 
 /**
  * Remember to look here http://visualgo.net/sorting
