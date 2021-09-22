@@ -18,5 +18,22 @@ const arrOfNum = [1, 2, 2, 4, 5, 6, 6];
 
 const getUniqueValues = (arrOfNum) => {
   // TO DO
+  let obj = {}
+  for (let index = 0; index < arrOfNum.length; index++) {
+    if(!arrOfNum[index]) {
+      obj[index] = 1
+    }
+  }
+
+  let arr = Object.keys(obj);
+
+  return arr
 }
 console.log(getUniqueValues(arrOfNum)); // [1, 2, 4, 5, 6]
+
+
+describe("Tests", () => {
+  it("test getUniqueValues", () => {
+    expect(getUniqueValues([1, 2, 2, 4, 5, 6, 6])).toEqual([1, 2, 4, 5, 6])
+  });
+});
