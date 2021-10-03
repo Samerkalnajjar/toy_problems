@@ -12,4 +12,21 @@
 
 const commonCharacters = (str1, str2) => {
   // TODO
-};
+  let obj = {};
+  let arr = [];
+
+  for(let i = 0; i < str1.length; i++) {
+    if(!obj[str1[i]]) {
+      obj[str1[i]] = 1;
+    } else {
+      obj[str1[i]] += 1;
+    }
+  }
+
+  for(let i = 0; i < str2.length; i++) {
+    if(obj[str2[i]] === 1) {
+      arr.push(str2[i]);
+    }
+  }
+  return arr.join("");
+}
