@@ -9,9 +9,9 @@
   "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
  */
 
-  function toCamelCase(str){
-    return str.replace(/[_-]\w/gi, ch => ch[1].toUpperCase());
-  }
+function toCamelCase(str) {
+  return str.replace(/[_-]\w/gi, (ch) => ch[1].toUpperCase());
+}
 
   xdescribe("Tests", () => {
     it("test toSnakeCase", () => {

@@ -15,12 +15,12 @@
 }
 
 
-describe("Tests", () => {
-	it("test factorial", () => {
-		expect(factorial(0)).toEqual(1)
-		expect(factorial(1)).toEqual(1)
-		expect(factorial(5)).toEqual(120)
-		expect(factorial(6)).toEqual(720)
-		expect(factorial(11)).toEqual(39916800)
-	})
-})
+describe('Tests', () => {
+  it('test factorial', () => {
+    expect(factorial(0)).toEqual(1);
+    expect(factorial(1)).toEqual(1);
+    expect(factorial(5)).toEqual(120);
+    expect(factorial(6)).toEqual(720);
+    expect(factorial(11)).toEqual(39916800);
+  });
+});
