@@ -32,3 +32,28 @@
   var addAndMultiplyTwice = pipe(add2, multiplyBy3, multiplyBy3);
   addAndMultiplyTwice(5); //should be 63
  */
+
+/**
+ * compose function
+ * @param  {Any} first  first
+ * @param  {Any} second  second
+ * @return {String} string
+ */
+  function compose(first, second) {
+    return function temp(name) {
+      return first(second(name))
+    }
+  }
+
+  /**
+ * Pipe function
+ * @param  {Any} first first
+ * @param  {Any} second second
+ * @param  {Any} third third
+ * @return {Number}  number
+ */
+  function pipe(first, second, third) {
+    return function temp(number) {
+      return third(second(first(number)))
+    }
+  }
