@@ -31,24 +31,24 @@ rotate(data, 12478) // => [3, 4, 5, 1, 2]
  * @return {array}
  */
 const rotate = function(array, steps) {
-    if(steps > 0) {
-        for (let index = 0; index < steps; index++) {
-            array.unshift(array.pop());
-        }
-        return array
-    } else {
-        for (let index = 0; index > steps; index--) {
-            array.push(array.shift());
-        }
-        return array
+  if (steps > 0) {
+    for (let index = 0; index < steps; index++) {
+      array.unshift(array.pop());
     }
-};
+    return array;
+  } else {
+    for (let index = 0; index > steps; index--) {
+      array.push(array.shift());
+    }
+    return array;
+  }
+}
 
 describe('Rotate functions', () => {
-    it('steps are positive', () => {
-        expect(rotate([1, 2, 3, 4, 5], 1)).toEqual([5, 1, 2, 3, 4]);
-    })
-    it('steps are negative', () => {
-        expect(rotate([1, 2, 3, 4, 5], -1)).toEqual([2, 3, 4, 5, 1]);
-    })
-})
+  it('steps are positive', () => {
+    expect(rotate([1, 2, 3, 4, 5], 1)).toEqual([5, 1, 2, 3, 4]);
+  });
+  it('steps are negative', () => {
+    expect(rotate([1, 2, 3, 4, 5], -1)).toEqual([2, 3, 4, 5, 1]);
+  });
+});
